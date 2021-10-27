@@ -19,7 +19,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/new', withAuth, async (req, res) => {
-    res.render('')
+    res.render('new-blog');
 });
 
 router.get('/edit/:id', withAuth, async (req, res) => {
@@ -29,7 +29,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       if (blogData) {
         const blogs = blogData.get({ plain: true });
   
-        res.render('edit-post', { blogs });
+        res.render('edit', { blogs });
       } else {
         res.status(404).end();
       }
