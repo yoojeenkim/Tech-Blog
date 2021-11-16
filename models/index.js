@@ -30,4 +30,3 @@ Comment.belongsTo(Blog, {
 });
 
 module.exports = { User, Blog, Comment };
-//this may need some changes, perhaps use through: to link user and blogs together?
